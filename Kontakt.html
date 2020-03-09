@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Kontakt | Hotel Panonija</title>
+  <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous">
+  </script>
+</head>
+<body>
+
+  <header id="site-header">
+    <a class="header-logo" href="index.html"> <!-- WARNING: promijeniti href na kraju, i na ostalim stranicama -->
+      <img src="./img/logo panonija full.svg" alt="Hotel Panonija">
+    </a>
+    <nav>
+        <a href="/o hotelu.html">O hotelu</a>
+        <div class="sobe">
+          <a href="#">Sobe&#9662;</a>
+          <ul>
+            <li><a href="Jednokrevetne sobe.html">Jednokrevetne sobe</a></li>
+            <li><a href="#">Dvokrevetne sobe</a></li>
+            <li><a href="#">Trokrevetne sobe</a></li>
+            <li><a href="#">Apartmani</a></li>
+          </ul>
+        </div>
+        <div class="dvorane">
+          <a href="#">Dvorane&#9662;</a>
+          <ul>
+            <li><a href="#">Svadbene svečanosti</a></li>
+            <li><a href="#">Poslovna događanja</a></li>
+          </ul>
+        </div>
+        <a href="/gastronomija.html">Gastronomija</a>
+        <a href="/rezervacija.html">Rezervacija</a>
+        <a href="/kontakt.html">Kontakt</a>
+        <div class="language">
+          <a href="#">
+            <img src="./img/icons/lang-cro.png" title="Hrvatski" alt="Hrvatski">&#9662;
+          </a>
+            <ul>
+              <li><img src="./img/icons/lang-cro.png" title="Hrvatski" alt="Hrvatski"></li>
+              <li><img src="./img/icons/lang-eng.png" title="English" alt="English"></li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <header id="page-header">
+      <h1 class="page-header-title">Kontakt</h1>
+    </header>
+
+    <div class="hero-kontakt">
+      <div class="kontakt-wrap">
+        <div class="kontakt-left-wrap">
+          <div class="subtitle-kontakt-wrap">
+            <h3>HOTEL PANONIJA za ugostiteljstvo d.o.o.</h3>
+            <hr>
+          </div>
+          <ul>
+            <li>
+              <img src="./img/icons/location.svg" alt="location">
+              <adress>I. Kukuljevića Sakcinskog 21, Sisak, Hrvatska</adress>
+            </li>
+            <li>
+              <img src="./img/icons/telephone.svg" alt="telephone">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/mail.svg" alt="mail">
+              <a href="mailto:name@email.com" target="_blank">E-mail</a>
+            </li>
+          </ul>
+          <div class="kontakt-left-inner-wrap">
+            <p><strong>OIB: </strong>83771382581</p>
+            <p>Trgovački sud u Zagrebu</p>
+            <br>
+            <p><strong>MBS: </strong>080329355</p>
+            <p><strong>MB: </strong>03731901</p>
+            <br>
+            <p><strong>Temeljni kapital: </strong>12.477.800,00 kn, uplaćen u cjelosti.</p>
+            <p><strong>Poslovni računi:</strong></p>
+            <p>OTP banka Hrvatska d.d., Domovinskog rata 3, 23001 Zadar, Croatia</p>
+            <p>IBAN: HR9824070001188005886</p>
+            <p>ZABA d.d.</p>
+            <p>IBAN: HR0923600001102542172</p>
+          </div>
+        </div>
+        <div class="kontakt-right-wrap">
+          <form class="kontakt-form">
+
+              <h3>Kontakt</h3>
+
+              <div class="name">
+                <input type="text" name="name" autocomplete="off" required/>
+                <label for="name" class="label-name">
+                  <span class="content-name">Ime*</span>
+                </label>
+              </div>
+
+
+              <div class="email">
+                <input type="email" name="email" autocomplete="off" required  placeholder=" "//>
+                <label for="email" class="label-email">
+                  <span class="content-email">E-mail*</span>
+                </label>
+              </div>
+
+              <div class="subject">
+                <label for="subject">Tema*</label>
+                <select name="subject" required>
+                  <option value="1" disabled selected>-</option>
+                  <option value="2">rezervacija</option>
+                  <option value="3">poslovna događanja</option>
+                  <option value="4">svadbene svečanosti</option>
+                  <option value="4">drugo</option>
+                </select>
+              </div>
+
+              <div class="message">
+                <input type="text" name="message" autocomplete="off" required placeholder=" "/>
+                <label for="message" class="label-message">
+                  <span class="content-message">Poruka</span>
+                </label>
+              </div>
+
+              <div class="captcha">
+              </div>
+
+              <div class="btn-block-kontakt">
+                <button type="submit" href="/">Pošalji</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="workers">
+      <div class="workers-title">
+        <h2>Naši djelatnici</h2>
+        <hr>
+      </div>
+      <div class="workers-left scroll-left">
+        <div class="workers-pic-title">
+          <figure class="workers-pic">
+            <img src="./favicon.png" alt="">
+          </figure>
+          <div class="workers-subtitle">
+            <h3>Ivica Knežević</h3>
+            <h4>Direktor hotela</h4>
+          </div>
+        </div>
+        <div class="workers-info">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae recusandae illum obcaecati quasi, molestiae, explicabo eos doloremque porro nam.</p>
+        </div>
+        <div class="workers-kontakt">
+          <ul>
+            <li>
+              <img src="./img/icons/telephone.svg" alt="telephone">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/smartphone.svg" alt="mobile">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/mail.svg" alt="mail">
+              <a href="mailto:name@email.com" target="_blank">E-mail</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="workers-middle scroll-down">
+        <div class="workers-pic-title">
+          <figure class="workers-pic">
+            <img src="./favicon.png" alt="">
+          </figure>
+          <div class="workers-subtitle">
+            <h3>Emila Koštić</h3>
+            <h4>Prodaja i marketing</h4>
+          </div>
+        </div>
+        <div class="workers-info">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae recusandae illum obcaecati quasi, molestiae, explicabo eos doloremque porro nam.</p>
+        </div>
+        <div class="workers-kontakt">
+          <ul>
+            <li>
+              <img src="./img/icons/telephone.svg" alt="telephone">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/smartphone.svg" alt="mobile">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/mail.svg" alt="mail">
+              <a href="mailto:name@email.com" target="_blank">E-mail</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="workers-right scroll-right">
+        <div class="workers-pic-title">
+          <figure class="workers-pic">
+            <img src="./favicon.png" alt="">
+          </figure>
+          <div class="workers-subtitle">
+            <h3>Natalija Mencl-Vuljak</h3>
+            <h4>Financije i računovodstvo</h4>
+          </div>
+        </div>
+        <div class="workers-info">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae recusandae illum obcaecati quasi, molestiae, explicabo eos doloremque porro nam.</p>
+        </div>
+        <div class="workers-kontakt">
+          <ul>
+            <li>
+              <img src="./img/icons/telephone.svg" alt="telephone">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/smartphone.svg" alt="mobile">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/mail.svg" alt="mail">
+              <a href="mailto:name@email.com" target="_blank">E-mail</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="map kontakt">
+      <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=I.%20Kukuljevi%C4%87a%20Sakcinskog%2021%2C%2044000%20Sisak%2C%20Hrvatska&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=near" aria-label="I. Kukuljevića Sakcinskog 21, 44000 Sisak, Hrvatska"></iframe>
+    </div>
+    <a id="back-to-top-button"></a>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html"> <!-- WARNING: promijeniti href na kraju, tu i na ostalim stranicama -->
+        <img src="./img/logo panonija full.svg" alt="Hotel Panonija">
+      </a>
+
+      <div class="footer-contact-container">
+        <div class="footer-linkovi">
+          <h3>Korisni linkovi</h3>
+            <ul>
+              <li>
+                <a href="https://sisakturist.com" target="_blank">Turistička zajednica grada Siska</a>
+              </li>
+              <li>
+                <a href="https://turizam-smz.hr" target="_blank">Turistička zajednica SMŽ</a>
+              </li>
+              <li>
+                <a href="https://sisak.hr" target="_blank">Grad Sisak</a>
+              </li>
+            </ul>
+        </div>
+
+        <div class="footer-kontakt">
+          <h3>Kontakt</h3>
+          <ul>
+            <li>
+              <img src="./img/icons/location-white.svg" alt="location">
+              <adress>I. Kukuljevića Sakcinskog 21, Sisak, Hrvatska</adress>
+            </li>
+            <li>
+              <img src="./img/icons/telephone-white.svg" alt="telephone">
+              <a href="tel:+385 44 515 600">+385 44 515 600</a>
+            </li>
+            <li>
+              <img src="./img/icons/mail-white.svg" alt="mail">
+              <a href="mailto:name@email.com" target="_blank">E-mail</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-social-media">
+          <h3>Social media</h3>
+          <div class="social-media-container">
+            <a href="#">
+              <img src="./img/icons/bookingcom-logo.svg" alt="Booking">
+            </a>
+            <a href="#">
+              <img src="./img/icons/facebook-logo.svg" alt="Facebook">
+            </a>
+            <a href="#">
+              <img src="./img/icons/twitter-logo.svg" alt="Twitter">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-img">
+        <img src="./img/hotel-dark.png" alt="Hotel Panonija">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright 2020 - Hotel Panonija </p> <!-- WARNING: u js napisati dinamicki -->
+    </div>
+  </footer>
+
+
+</body>
+<script src="./js/main.js"></script>
+</html>

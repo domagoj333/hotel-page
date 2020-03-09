@@ -1,0 +1,23 @@
+.hero-404-background {
+  height: 55vh;
+  background-color: #020202;
+  display: flex;
+  justify-content: center;
+  & .hero-404 {
+    height: 55vh;
+    width: 100%;
+    background-image: url('./img/404.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+  }
+}
+
+
+@media only screen and (max-width: $break) {
+  .hero-404 {
+    background-position: start;
+    background-size: cover;
+  }
+}

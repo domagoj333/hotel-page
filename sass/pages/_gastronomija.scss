@@ -1,0 +1,53 @@
+.gastronomija-wrap {
+  width: 100%;
+  z-index: 10;
+  background-color: #e6e6e6; //zamijeniti
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  align-items: center;
+}
+
+.restoran-countainer,
+.catering-countainer,
+.slatki-kutak-countainer {
+  grid-column: 2/3;
+  height: 50vh;
+  min-height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.restoran-img,
+.catering-img,
+.slatki-kutak-img {
+  grid-column: 1/4;
+  height: 70vh;
+}
+
+.restoran-img {
+  background-image: url('./img/meso.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.catering-img {
+  background-image: url('./img/meso.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slatki-kutak-img {
+  background-image: url('./img/meso.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slatki-kutak-countainer ul {
+  font-size: 2rem;
+}

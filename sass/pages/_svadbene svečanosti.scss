@@ -1,0 +1,154 @@
+.hero-svadbe {
+  height: 120vh;
+  min-height: 80rem;
+  width: 100%;
+  z-index: 15;
+  background-color: #e6e6e6; //zamijeniti
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 1fr 5fr;
+  align-items: center;
+}
+
+.hero-svadbe .few-words {
+  grid-column: 2/3;
+}
+
+.few-words {
+  background-color: #e6e6e6; //zamijeniti
+}
+
+.few-words hr {
+  height: 0.1rem;
+  width: 30%;
+  margin: 1rem 0 2rem 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,0) 100%);
+  align-self: center;
+}
+
+.svadbene-bcg {
+  height: 100%;
+  grid-column: 1/4;
+  background-image: url('./img/sobe/place holder bcg.jpg');
+  background:linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%), url('./img/sobe/place holder bcg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+}
+
+.svadbene-info-container {
+  height: 90%;
+  width: 100%;
+  grid-column: 2/3;
+  background-color: #e6e6e6; //zamijeniti
+  align-self: center;
+  justify-self: center;
+  border-radius: .4rem;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+/* menu dio
+---------------*/
+.svadbe-menu {
+  height: 120rem;
+  width: 100;
+  z-index: 10;
+  position: relative;
+  background-color: #e6e6e6; //zamijeniti
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 1fr 7fr;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 1fr 1fr;
+  & .menu-one {
+    grid-column: 2/3;
+    justify-self: end;
+  }
+  & .menu-two {
+    grid-column: 3/4;
+    justify-self: start;
+  }
+  & .menu-three {
+    grid-column: 2/3;
+    justify-self: end;
+  }
+  & .menu-four {
+    grid-column: 3/4;
+    justify-self: start;
+  }
+}
+
+//samo za buket opacity, mozda smislit nesto pametnije..
+.svadbe-menu::after {
+  content: "";
+  background: url('./img/floral-bouquet2.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 11;
+}
+
+.menu-one,
+.menu-two,
+.menu-three,
+.menu-four {
+  width: 60%;
+  height: 95%;
+  margin: 2rem;
+  position: relative;
+  background-color: white; //zamijeniti
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  z-index: 12;
+}
+
+.menu-overlay {
+  width: 100%;
+  height: 100%;
+  background: url('./img/menu-bcg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .2;
+}
+
+.menu-text-wrap {
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  & h3 {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  }
+  & hr {
+    height: 0.1rem;
+    width: 30%;
+    margin: 1rem 0 2rem 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,0) 100%);
+    align-self: center;
+  }
+  & ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2rem;
+  }
+}

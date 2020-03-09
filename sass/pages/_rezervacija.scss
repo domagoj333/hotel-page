@@ -1,0 +1,444 @@
+.rezervacija-bcg {
+  height: 100vh;
+  min-height: 76rem;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  justify-content: center;
+  z-index: 10;
+  background: url('./img/sobe/place holder bcg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-position: center;
+}
+
+.rezervacija-bcg::after {
+  position: absolute;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+  z-index: 11;
+  height: 100vh;
+  min-height: 76rem;
+  width: 100%;
+  content: '';
+}
+
+.rezervacija-form {
+  grid-column: 2/3;
+  //height: 90%;
+  align-self: center;
+  background-color: white;
+  z-index: 12;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  overflow: hidden;
+  border-radius: .4rem;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.itemset-main {
+  grid-row: 1/2;
+}
+.itemset-rooms,
+.itemset-hall {
+  grid-row: 2/3;
+}
+.itemset-msg-submit {
+  grid-row: 3/4;
+}
+
+.itemset-main,
+.itemset-rooms,
+.itemset-hall,
+.itemset-msg-submit {
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+}
+
+.name-lname,
+.email-phone,
+.reservation-type,
+.message-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.name,
+.lname,
+.email,
+.phone,
+.reservation-type,
+.message {
+  position: relative;
+  width: 40%;
+  height: 7rem;
+  overflow: hidden;
+}
+
+.itemset-main input,
+.itemset-msg-submit input {
+  width: 100%;
+  height: 100%;
+  color: $primaryFontColor;
+  font-size: 2rem;
+  padding-top: 3rem;
+  border: none;
+  outline: none;
+}
+
+.itemset-main label,
+.itemset-msg-submit label {
+  position: absolute;
+  bottom: 0rem;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  pointer-events: none;
+  border-bottom: .1rem solid black;
+}
+
+.itemset-main select,
+.itemset-msg-submit select {
+  font-size: 2rem;
+  width: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-image: url('./img/icons/arrow-down-black.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 1rem;
+}
+
+
+.itemset-main label::after,
+.itemset-msg-submit label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -.1rem;
+  border-bottom: .3rem solid $primaryColor;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.when-selected {
+  border-bottom: .2rem solid $primaryColor !important;
+  transition: border .3s ease;
+}
+
+
+.content-name,
+.content-lname,
+.content-email,
+.content-phone,
+.content-message  {
+  position: absolute;
+  bottom: .5rem;
+  left: 0px;
+  transition: all .3s ease;
+}
+
+input:focus + .label-name .content-name,
+input:valid + .label-name .content-name,
+input:focus + .label-lname .content-lname,
+input:valid + .label-lname .content-lname,
+input:focus + .label-email .content-email,
+input:valid + .label-email .content-email,
+input:focus + .label-phone .content-phone,
+input:valid + .label-phone .content-phone,
+input:focus + .label-message .content-message,
+input:valid + .label-message .content-message {
+  transform: translateY(-150%);
+  font-size: 2rem;
+  color: $primaryColor;
+}
+
+.email input:invalid:not(:focus):not(:placeholder-shown) + .label-email .content-email,
+.message input:invalid:not(:focus):not(:placeholder-shown) + .label-message .content-message {
+  transform: translateY(-150%);
+  font-size: 2rem;
+  color: red;
+}
+
+.email input:invalid:not(:focus):not(:placeholder-shown) + label::after,
+.message input:invalid:not(:focus):not(:placeholder-shown) + label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -.1rem;
+  border-bottom: .3rem solid red;
+  transform: translateX(0%);
+  transition: transform .3s ease;
+}
+
+.email input:invalid:focus:not(:placeholder-shown) + .label-email .content-email,
+.message input:invalid:focus:not(:placeholder-shown) + .label-message .content-message {
+  transform: translateY(-150%);
+  font-size: 2rem;
+  color: red;
+}
+
+.email input:invalid:focus:not(:placeholder-shown) + label::after,
+.message input:invalid:focus:not(:placeholder-shown) + label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -.1rem;
+  border-bottom: .3rem solid red;
+  transition: transform .3s ease;
+}
+
+
+input:focus + .label-name::after,
+input:valid + .label-name::after,
+input:focus + .label-lname::after,
+input:valid + .label-lname::after,
+input:focus + .label-email::after,
+input:valid + .label-email::after,
+input:focus + .label-phone::after,
+input:valid + .label-phone::after,
+input:valid + .label-message::after,
+input:focus + .label-message::after {
+  transform: translateX(0%);
+}
+
+.reservation-type {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  & label {
+    position: inherit;
+    bottom: -1rem;
+    left: 0%;
+    width: 55%;
+    height: 100%;
+    font-size: 3rem;
+    pointer-events: none;
+    border-bottom: none;
+    transition: all .3s ease;
+  }
+  & label::after {
+    display: none;
+    border-bottom: none;
+  }
+  & select {
+    font-size: 2rem;
+    text-align: center;
+    width: 45%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('./img/icons/arrow-down-black.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1rem;
+    border-bottom: .1rem solid black;
+  }
+}
+
+
+/* drugi dio
+---------------*/
+.itemset-rooms,
+.itemset-hall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 3rem;
+}
+
+.checkindate-checkoutdate {
+  width: 100%;
+  grid-column: 1/3;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  & label {
+    font-size: 3rem;
+    transition: all .3s ease;
+  }
+  & input {
+    margin-left: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: .1rem solid black;
+    transition: all .3s ease;
+  }
+}
+
+.rooms-left {
+  width: 100%;
+  grid-column: 1/2;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.rooms-right {
+  width: 100%;
+  grid-column: 2/3;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.people-number,
+.room-type,
+.children-number,
+.com-type {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  & label {
+    width: 40%;
+    font-size: 3rem;
+    transition: all .3s ease;
+  }
+  & input {
+    font-size: 2rem;
+  }
+  & select {
+    width: 40%;
+    font-size: 2rem;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('./img/icons/arrow-down-black.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1rem;
+    border-bottom: .1rem solid black; //tu smo stali, maknut ovo i to stavit pod nekakav :valid, a inace stavit crni border
+  }
+}
+
+/* treci dio
+---------------*/
+.btn-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-block button {
+  background: none;
+  text-align: center;
+  margin-left: 6rem;
+  margin-right: 3rem;
+  padding: .5rem 2rem;
+  font-size: 2rem;
+  //letter-spacing: .3rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    transition: all .2s ease-in-out;
+    box-shadow: inset 0 0 0 0.2rem black;
+  }
+}
+
+.itemset-msg-submit p {
+  font-size: 1rem;
+}
+
+/* media queries
+---------------*/
+@media only screen and (max-width: 1200px) {
+  .itemset-main,
+  .itemset-rooms,
+  .itemset-hall,
+  .itemset-msg-submit {
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+  }
+  .rooms-left {
+
+    & select {
+      width: 50%;
+  }
+  }
+  .people-number,
+  .room-type,
+  .children-number,
+  .com-type {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 808px) {
+  .rezervacija-bcg {
+    min-height: 100rem;
+  }
+  .rezervacija-form label,
+  .rezervacija-form select,
+  .rezervacija-form option {
+    font-size: 2rem;
+  }
+  .rezervacija-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  & .itemset-main,
+    .itemset-rooms,
+    .itemset-hall,
+    .itemset-msg-submit {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    & .reservation-type {
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    & .checkindate-checkoutdate,
+      .roomtype-comtype,
+      .message-btn {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 2rem;
+      }
+      & .people-number select,
+        .roomtype-comtype select {
+          //width: 95%;
+          margin-bottom: 1rem;
+      }
+      & .message-btn .message {
+          width: 95%;
+      }
+      & .message-btn .btn-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          & button {
+            margin: 0;
+          }
+      }
+}

@@ -1,0 +1,372 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $tertiaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.title-container {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  color: $secondaryFontColor;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  user-select: none;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.88);
+}
+
+.hr-main {
+  height: 0.1rem;
+  width: 20%;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, $secondaryFontColor 50%, rgba(255,255,255,0) 100%);
+}
+
+.main-subtitle {
+  color: $secondaryFontColor;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  user-select: none;
+  line-height: 5rem;
+  transform: scale(1, .75);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.88);
+}
+
+.star-container {
+  width: auto;
+  height: auto;
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  & img {
+    width: 4vh;
+    margin: .5vh;
+  }
+  & .star-middle {
+    margin-bottom: 2vh;
+  }
+}
+
+.btn.homepage {
+  position: absolute;
+  top: 80%;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  letter-spacing: .3rem;
+  color: $secondaryFontColor;
+  border: .2rem solid $secondaryFontColor;
+  border-radius: .4rem;
+  &:hover {
+    transition: all .2s ease-in-out;
+    box-shadow: inset 0 0 0 0.2rem $secondaryFontColor;
+  }
+}
+
+.page-down-arrow {
+  position: absolute;
+  top: 90%;
+  width: 5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* about dio (sobe, svečanosti i poslovna događanja)
+---------------*/
+.about-container {
+  width: 100%;
+  height: 100vh;
+  min-height: 80rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background:linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%), url('./img/entrance.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-rows: 1fr 3fr;
+
+}
+
+.few-words {
+  grid-column: 1/6;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  & h2 {
+    color: black;
+    margin-bottom: .7vh;
+  }
+  & p {
+    color: black;
+  }
+}
+
+.rooms {
+  grid-column: 2/3;
+}
+
+.wedding {
+  grid-column: 3/4;
+}
+
+.congress {
+  grid-column: 4/5;
+}
+
+.rooms,
+.wedding,
+.congress {
+  width: 95%;
+  height: 70%;
+  padding: 2%;
+  background-color: white;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    //transform: scale(1.02);
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+  }
+  & img {
+    background-color: rgb(105, 144, 207);
+    width: 100%;
+    height: 50%;
+    margin-bottom: 4%;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  }
+  & .rooms-wrap,
+    .wedding-wrap,
+    .congress-wrap {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  & hr {
+    height: 0.1rem;
+    width: 30%;
+    margin: 2% 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,0) 100%);
+    align-self: center;
+  }
+}
+
+/* zadnji dio početne stranice
+---------------*/
+.image-gallery {
+  width: 100%;
+  height: 120vh;
+  min-height: 110rem;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 6fr 5fr 7fr;
+  border: 1rem solid white;
+  overflow: hidden;
+}
+
+.image-gallery-img1 {
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+  }
+.image-gallery-img2 {
+  grid-column: 2/4;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+.image-gallery-img3 {
+  grid-column: 4/5;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+.image-gallery-img4 {
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder5.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+.image-gallery-img5 {
+  grid-column: 2/4;
+  width: 100%;
+  height: 100%;
+  padding-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  border: .3rem solid white;
+}
+.image-gallery-img6 {
+  grid-column: 4/5;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+.image-gallery-img7 {
+  grid-column: 1/3;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+.image-gallery-img8 {
+  grid-column: 3/5;
+  width: 100%;
+  height: 100%;
+  background-image: url('./img/sobe/place holder3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .3rem solid white;
+  filter: grayscale(40%);
+  transition: filter .5s ease-in-out;
+}
+
+.image-gallery-img1:hover,
+.image-gallery-img2:hover,
+.image-gallery-img3:hover,
+.image-gallery-img4:hover,
+.image-gallery-img5:hover,
+.image-gallery-img6:hover,
+.image-gallery-img7:hover,
+.image-gallery-img8:hover {
+  filter: grayscale(0%);
+}
+
+.map {
+  bottom: 0px;
+  height: 30rem;
+  width: 100%;
+  border: .5rem solid white;
+  border-top: 0;
+  display: flex;
+  justify-content: center;
+  & iframe {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES
+---------------*/
+@media only screen and (max-width: 860px) {
+  .main-title {
+    font-size: 4rem;
+  }
+  .main-subtitle {
+    font-size: 2.5rem;
+  }
+  .btn {
+    font-size: 2rem;
+  }
+  .about-container {
+    height: 170vh;
+    min-height: 160rem;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+  }
+  .rooms {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 95%;
+    width: 80%;
+  }
+
+  .wedding {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: 95%;
+    width: 80%;
+  }
+
+  .congress {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    height: 95%;
+    width: 80%;
+  }
+  /* zadnji dio početne stranice
+  ---------------*/
+  .image-gallery {
+    height: 70vh;
+    min-height: 60rem;
+  }
+  .map {
+    height: 20rem;
+  }
+}

@@ -1,0 +1,249 @@
+// compileCompressed: ../$1.min.css, compileExpanded: ../$1.css
+
+
+/* IMPORTS
+---------------*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+
+
+/* VARIABLES
+---------------*/
+$primaryColor: #3B9944;
+$secondaryColor: #6A85B8;
+$tertiaryColor: #949599;
+
+$primaryFontColor: #2e2e2e;
+$secondaryFontColor: #e6e6e6;
+
+$break: 808px;
+
+/* MAIN
+---------------*/
+html {
+  font-size: 62.5%; //da lakse racunamo rem (sada je 1rem=10px)
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: normal;
+  color: inherit;
+  //transition: all ease-in-out 250ms;
+}
+
+body {
+  background-color: $secondaryFontColor;
+}
+
+main {
+  z-index: 10;
+  position: relative;
+}
+
+::selection {
+    background-color: $primaryColor;
+    color: white;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2rem;
+}
+p {
+  font-size: 2rem;
+  // odrediti color svuda da ne bude crna
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* STYLE transform za js
+---------------*/
+
+.fadein {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.scroll-left {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 2s ease-in-out;
+}
+
+.scroll-right {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 2s ease-in-out;
+}
+
+.scroll-down {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-in-out;
+}
+
+
+.fadein.in-view,
+.scroll-left.in-view,
+.scroll-right.in-view,
+.scroll-down.in-view {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-property: opacity, transform;
+  transition-duration: 2.2s, 2s;
+  transition-timing-function: ease-in-out;
+}
+
+
+/* back to top button
+---------------*/
+#back-to-top-button {
+  display: inline-block;
+  background-color: $primaryFontColor;
+  background-image: url('./img/icons/arrow-down-white.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(180deg);
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  transition: background-color .3s,
+              opacity .5s,
+              visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#back-to-top-button.show {
+  opacity: .75;
+  visibility: visible;
+  cursor: pointer;
+}
+
+#back-to-top-button:hover {
+  opacity: 1;
+}
+
+
+/* HEADER
+---------------*/
+@import './partials/header.scss';
+
+/* FOOTER
+---------------*/
+@import './partials/footer.scss';
+
+/* HOME PAGE
+---------------*/
+@import './pages/homepage.scss';
+
+/* JEDNOKREVETNE SOBE PAGE
+---------------*/
+@import './pages/sobe.scss';
+
+/* POSLOVNA DOGAĐANJA PAGE
+---------------*/
+@import './pages/poslovna događanja.scss';
+
+/* SVADBENE SVEČANOSTI PAGE
+---------------*/
+@import './pages/svadbene svečanosti.scss';
+
+/* GASTRONOMIJA PAGE
+---------------*/
+@import './pages/gastronomija.scss';
+
+/* REZERVACIJA PAGE
+---------------*/
+@import './pages/rezervacija.scss';
+
+/* KONTAKT PAGE
+---------------*/
+@import './pages/kontakt.scss';
+
+/* 404 PAGE
+---------------*/
+@import './pages/404.scss';
+
+/* IMAGE SLIDER
+---------------*/
+@import './partials/image-slider.scss';
+
+/* QUERIES
+---------------*/
+/* Main queries 1100px
+---------------*/
+@media  screen and (max-width: 1100px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    // odrediti color svuda da ne bude crna
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+}
+/* Main queries 860px
+---------------*/
+@media  screen and (max-width: 860px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    // odrediti color svuda da ne bude crna
+  }
+
+  a {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,193 @@
+footer {
+  bottom: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 25vh;
+  min-height: 20rem;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  height: 88%;
+  width: 100%;
+  background-color: #424242;
+  color: $secondaryFontColor;
+  border-top: 5px solid $primaryColor;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  grid-column: 1/2;
+  justify-self: center;
+  & img {
+    width: 20vh;
+    min-width: 20rem;
+  }
+}
+
+.footer-contact-container {
+  grid-column: 2/5;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.footer-linkovi {
+  margin-right: 3px;
+  & h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  & a {
+    font-size: 1.8rem;
+  }
+    & a:hover {
+      transition: all .3s ease-in-out;
+      color: $primaryColor;
+    }
+}
+
+.footer-kontakt {
+
+  & h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  & li {
+    display: flex;
+    align-items: center;
+  }
+  & ul li img {
+    width: 1.7vh;
+    margin-right: 8px;
+  }
+  & adress, a {
+    font-size: 1.8rem;
+  }
+    & a:hover {
+      transition: all .3s ease-in-out;
+      color: $primaryColor;
+    }
+}
+
+.footer-social-media {
+  margin-left: 3px;
+  & h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  & .social-media-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+    & img {
+      width: 3vh;
+      min-width: 3rem;
+    }
+}
+
+.footer-img {
+  width: 100%;
+  min-width: 20rem;
+  align-self: end;
+  opacity: 0.41;
+  mix-blend-mode: lighten;
+  & img {
+    width: 100%
+  }
+}
+
+.footer-bottom {
+  grid-column: 1/6;
+  height: 12%;
+  width: 100%;
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & p {
+    font-size: 1.2rem;
+    color: $secondaryFontColor;
+  }
+}
+
+/* Footer queries 1100px
+---------------*/
+@media  screen and (max-width: 1100px) {
+  .footer-logo img {
+    width: 15vh;
+    min-width: 15rem;
+  }
+  .footer-linkovi a,
+  .footer-kontakt adress,
+  .footer-kontakt a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer queries 860px
+---------------*/
+@media  screen and (max-width: 860px) {
+  footer {
+    min-height: 60rem;
+  }
+  .footer-top {
+    position: relative;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+  }
+  .footer-contact-container {
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-kontakt,
+  .footer-social-media {
+    margin-top: 2rem;
+  }
+  .footer-kontakt li {
+    display: flex;
+    align-items: center;
+  }
+  .footer-img {
+    display: none;
+  }
+  .footer-top::after {
+    content: "";
+    background-image: url('./img/hotel-dark.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    opacity: 0.25;
+    mix-blend-mode: lighten;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+  .footer-linkovi a,
+  .footer-kontakt adress,
+  .footer-kontakt a {
+    font-size: 2rem;
+  }
+  .footer-top h3 {
+    font-size: 3rem;
+  }
+  .footer-bottom {
+    height: 6%;
+  }
+}

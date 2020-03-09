@@ -1,0 +1,302 @@
+.hero-kontakt {
+  height: 80vh;
+  min-height: 60rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  background-color: $secondaryFontColor;
+}
+
+.kontakt-wrap {
+  grid-column: 2/3;
+  height: 90%;
+  background-color: white;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  border-radius: .4rem;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.kontakt-left-wrap {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  & hr {
+    height: 0.2rem;
+    width: 60%;
+    margin-top: 1rem;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 50%, rgba(255,255,255,0) 100%);
+  }
+  & li {
+    display: flex;
+    align-items: center;
+  }
+  & ul li img {
+    width: 1.7vh;
+    margin-right: 8px;
+  }
+  & adress, a {
+    font-size: 1.8rem;
+  }
+    & a:hover {
+      transition: all .3s ease-in-out;
+      color: $primaryColor;
+    }
+}
+
+.subtitle-kontakt-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontakt-left-inner-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontakt-right-wrap {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kontakt-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  & .name,
+    .email,
+    .message {
+    position: relative;
+    width: 50%;
+    height: 7rem;
+    overflow: hidden;
+  }
+  & input {
+    width: 100%;
+    height: 100%;
+    color: $primaryFontColor;
+    font-size: 2rem;
+    padding-top: 3rem;
+    border: none;
+    outline: none;
+  }
+  & label {
+    position: absolute;
+    bottom: 0rem;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    pointer-events: none;
+    border-bottom: .1rem solid black;
+  }
+}
+
+.kontakt-form .subject {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  & label {
+    position: inherit;
+    bottom: 0rem;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    font-size: 3rem;
+    pointer-events: none;
+    border-bottom: none;
+  }
+  & select {
+    font-size: 2rem;
+    width: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('./img/icons/arrow-down-black.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1rem;
+    border-bottom: .1rem solid black;
+  }
+
+}
+
+.kontakt-form label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -.1rem;
+  border-bottom: .3rem solid $primaryColor;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.captcha {
+  width: 17rem;
+  height: 9rem;
+  background-image: url('./img/captcha placeholder.gif');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-block-kontakt button {
+  background: none;
+  text-align: center;
+  padding: .5rem 2rem;
+  font-size: 2rem;
+  //letter-spacing: .3rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    transition: all .2s ease-in-out;
+    box-shadow: inset 0 0 0 0.2rem black;
+  }
+}
+
+/* workers dio
+---------------*/
+.workers {
+  height: 70rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-rows: 2fr 7fr;
+  background-color: #ccc8bc;
+}
+
+.workers-title{
+  grid-column: 2/5;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  hr {
+    height: 0.2rem;
+    width: 60%;
+    margin-top: 1rem;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 50%, rgba(255,255,255,0) 100%);
+  }
+}
+
+.workers-left,
+.workers-middle,
+.workers-right {
+  height: 90%;
+  width: 75%;
+  background-color: white;
+  justify-self: center;
+  align-self: start;
+  border-radius: .4rem;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.workers-left {
+  grid-column: 2/3;
+  justify-self: end;
+}
+
+.workers-middle {
+  grid-column: 3/4;
+}
+.workers-right {
+  grid-column: 4/5;
+  justify-self: start;
+}
+
+.map.kontakt {
+  border: .5rem solid white;
+}
+
+/* workers svaki posebno dio
+---------------*/
+.workers-left,
+.workers-middle,
+.workers-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workers-pic-title {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workers-pic img {
+  height: 50px;
+  height: 50px;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+
+.workers-info {
+  margin: 2rem;
+  & p {
+    text-align: justify;
+  }
+}
+
+.workers-kontakt {
+  margin-bottom: 2rem;
+  & li {
+    display: flex;
+    align-items: center;
+  }
+  & ul li img {
+    width: 1.7vh;
+    margin-right: 8px;
+  }
+  & a {
+    font-size: 1.8rem;
+  }
+    & a:hover {
+      transition: all .3s ease-in-out;
+      color: $primaryColor;
+    }
+}
+
+/* Queries 1100px
+---------------*/
+@media  screen and (max-width: 1100px) {
+  .workers-left,
+  .workers-middle,
+  .workers-right {
+  //  height: 90%;
+  //  width: 85%;
+  }
+}
+
+
+@media  screen and (max-width: 860px) {
+  .kontakt-wrap {
+  
+  }
+}
